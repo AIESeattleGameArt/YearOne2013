@@ -1,0 +1,224 @@
+// PS_MultipleCamera
+// Pete "The German" Stache 11/02/2011
+//
+// version 2: allows naming the cameras with numbers
+// and uses cameras already in the scene
+//
+// new version- old one wasn't working
+//
+// DESCRIPTION: Creates cameras for multiple camera rendering
+//
+// HOW IT WORKS: creates cameras and puts them into separate render layers
+// then sets the start and end frame for the camera in the render settings, through layer overrides  
+
+
+// procedure that creates a layer overide and sets the new start and end frame int the render settings
+global proc PSrender_settings(string $layer, string $camera){
+// find out the name of the shape node
+string $shape[] = `listRelatives -shapes $camera`;
+// sets the start and end attributes on the PSCameraAttribute node
+setAttr ($camera+".Start") `intField -q -v ($camera+"StartValue")`;
+setAttr ($camera+".End") `intField -q -v ($camera+"EndValue")`;
+// selects the render layer
+editRenderLayerGlobals -currentRenderLayer $layer;
+// creates the layer override on the start and end frame
+editRenderLayerAdjustment -layer $layer "defaultRenderGlobals.startFrame";
+editRenderLayerAdjustment -layer $layer "defaultRenderGlobals.endFrame";
+// sets the start and end frame in the render settings
+setAttr "defaultRenderGlobals.startFrame" `getAttr ($camera+".Start")` ;
+setAttr "defaultRenderGlobals.endFrame" `getAttr ($camera+".End")`;
+// creates an layer override on the camera renderable attribute
+// and sets renderable to on 
+editRenderLayerAdjustment ($shape[0]+".renderable");
+setAttr ($shape[0]+".renderable") 1;
+}
+
+// procedure that creates camera and the render layer
+global proc PScreate_camera(){
+// get the name of the camera selected in the main window
+string $CameraName = `textFieldButtonGrp -q -text CameraNameText`; 
+// if the camera name already exists or the the text field is empty a confirm dialog box appaers  
+if($CameraName == "" || `objExists $CameraName`){
+        confirmDialog -m "Choose a Camera Name" -b "OK";
+    }else{
+        // get the camera type that is selected
+        int $CameraType= `getAttr "PSCameraAttributes.CameraType"`;
+        // switch to create the different camera types  
+        switch($CameraType){
+        case 0:
+        camera;
+        //rename the camera 
+        rename $CameraName;
+        break;
+        case 1:
+        camera -centerOfInterest 5 -focalLength 35 -lensSqueezeRatio 1 -cameraScale 1 -horizontalFilmAperture 1.41732 -horizontalFilmOffset 0 -verticalFilmAperture 0.94488 -verticalFilmOffset 0 -filmFit Fill -overscan 1 -motionBlur 0 -shutterAngle 144 -nearClipPlane 0.1 -farClipPlane 10000 -orthographic 0 -orthographicWidth 30 -panZoomEnabled 0 -horizontalPan 0 -verticalPan 0 -zoom 1;        
+        cameraMakeNode 2 ""; 
+        //rename the camera, the aim and the group
+        string $sel[] =`ls -sl`;
+        rename $sel[0] $CameraName;
+        rename ($sel[0]+"_aim") ($CameraName+"_aim");
+        rename ($sel[0]+"_group") ($CameraName+"_group");
+        break;
+        case 2:
+        camera -centerOfInterest 5 -focalLength 35 -lensSqueezeRatio 1 -cameraScale 1 -horizontalFilmAperture 1.41732 -horizontalFilmOffset 0 -verticalFilmAperture 0.94488 -verticalFilmOffset 0 -filmFit Fill -overscan 1 -motionBlur 0 -shutterAngle 144 -nearClipPlane 0.1 -farClipPlane 10000 -orthographic 0 -orthographicWidth 30 -panZoomEnabled 0 -horizontalPan 0 -verticalPan 0 -zoom 1;
+        cameraMakeNode 3 "";
+        //rename the camera, the aim, the up and the group
+        string $sel[] =`ls -sl`;
+        rename $sel[0] $CameraName;
+        rename ($sel[0]+"_aim") ($CameraName+"_aim");
+        rename ($sel[0]+"_up") ($CameraName+"_up");
+        rename ($sel[0]+"_group") ($CameraName+"_group");
+        // renames the group     
+        break;
+        }
+        // creates the layer and names it according to the camera name
+        createRenderLayer -name ($CameraName+"Layer") -global;
+        // adds new attributes for start and end to the PSCameraAttributes node 
+        addAttr -ln "Start" -at long -dv 1 $CameraName;
+        addAttr -ln "End" -at long -dv 24 $CameraName;       
+          
+        //gets all layers $layers
+        string $layers[] = `ls -type "renderLayer"`;        
+        //get all cameras $cams
+        string $cams[] = `ls -cameras`; 
+        // a block of ifs and for loops to remove all the cameras that should not be in the render layer
+        // first it goes through all the layers apart from the masterLayer or defaultRenderLayer
+        // then goes through the cameras apart from the default camera 
+        // and the the camera that is supposed to be in the render layer (render layer name = camera name) 
+        // then removes the cameras transform and shape node from the render layer
+            for($layer in $layers){
+                if($layer == "defaultRenderLayer"){
+                }else{                
+                    for($each in $cams){
+                        string $cam[] = `listRelatives -p -type "transform" $each`;    
+                            if($cam[0] == "persp" || $cam[0] == "top" || $cam[0] == "front" || $cam[0] == "side" || $layer == $cam[0]+"Layer"){   
+                            }else{               
+                                select $each;
+                                    if(`objExists ($cam[0]+"_group")`){
+                                        editRenderLayerMembers -remove -noRecurse $layer ($cam[0]+"_group");
+                                        editRenderLayerMembers -remove -noRecurse $layer $each;
+                                        editRenderLayerMembers -remove -noRecurse $layer $cam[0];
+                                        }else{           
+                                        editRenderLayerMembers -remove -noRecurse $layer $each;
+                                        editRenderLayerMembers -remove -noRecurse $layer $cam[0];
+                                }
+                            }
+                        }
+                    }
+               }                   
+        }
+// call up the main window at the end
+PS_MultipleCamera_gui;
+}
+
+// procedure to rename the camera, the aim, the up and the layer
+global proc PS_renameCamera(string $camera){
+string $new_name = `textFieldButtonGrp -q -text ($camera+"name_text")`;
+ rename $camera $new_name;
+ rename ($camera+"Layer") ($new_name+"Layer");
+ if(`objExists ($camera+"_group")`){
+     rename ($camera+"_group") ($new_name+"_group"); 
+     }
+ if(`objExists ($camera+"_aim")`){
+     rename ($camera+"_aim") ($new_name+"_aim"); 
+     }
+  if(`objExists ($camera+"_up")`){
+     rename ($camera+"_up") ($new_name+"_up"); 
+     }
+ 
+PS_MultipleCamera_gui; 
+ }
+ 
+// procedure for the main window
+global proc PS_MultipleCamera_gui(){
+
+// creates a transform node, that stores all the attributes 
+if(`objExists "PSCameraAttributes"`){
+}else{
+        createNode "transform" -n "PSCameraAttributes"; 
+        addAttr -ln "CameraType"  -at "enum" -en "Camera:Camera Aim:Camera Aim and Up:"  PSCameraAttributes;
+        lockNode PSCameraAttributes;        
+        }
+             
+// if the window already exists, delete it and build it again       
+if(`window -exists PScamera_gui`){
+    deleteUI PScamera_gui;
+    }
+    
+window PScamera_gui;
+columnLayout;
+
+
+// creates enum option menu for the camera type
+attrEnumOptionMenu -label "Camera Type" -attribute "PSCameraAttributes.CameraType";
+// text field and button to enter a name and create a camera
+textFieldButtonGrp -l "Camera Name" -text "" -buttonLabel "Create Camera" -buttonCommand "PScreate_camera" CameraNameText;
+
+setAttr "perspShape.renderable" 0;
+
+setParent..;   
+rowColumnLayout -numberOfColumns 6
+    -columnWidth 1 50
+    -columnWidth 2 300
+    -columnWidth 3 50
+    -columnWidth 4 30
+    -columnWidth 5 50
+    -columnWidth 6 30;
+text -font "boldLabelFont" -l "Cameras";
+text -l "";
+text -l "";
+text -l "";
+text -l "";
+text -l "";
+// goes through all the cameras apart from the default maya cameras
+// and displays their start and end frame
+// also buttons to select and delete the camera 
+string $cams[] = `ls -cameras`; 
+    for($each in $cams){
+        string $cam[] = `listRelatives -p -type "transform" $each`;
+        if($cam[0] == "persp" || $cam[0] == "top" || $cam[0] == "front" || $cam[0] == "side"){
+        }
+        else{
+        text -l "";   
+        textFieldButtonGrp -text $cam[0]  -buttonLabel "Rename" -buttonCommand ("PS_renameCamera "+ $cam[0]) ($cam[0]+"name_text");
+        text -l "Start";        
+        intField -v `getAttr ($cam[0]+".Start")` -rfc ("PSrender_settings "+$cam[0]+"Layer "+$cam[0]) -cc ("PSrender_settings "+$cam[0]+"Layer "+$cam[0]) ($cam[0]+"StartValue");
+        text -l "End";
+        intField -v `getAttr ($cam[0]+".End")` -rfc ("PSrender_settings "+$cam[0]+"Layer "+$cam[0]) -cc ("PSrender_settings "+$cam[0]+"Layer "+$cam[0])  ($cam[0]+"EndValue");
+        text -l "";
+        text -l "";
+        button -l "Select" -c ("select "+$cam[0]);
+        text -l "";
+        button -l "Delete" -c ("delete "+$cam[0]+"; delete "+ $cam[0]+"Layer; PS_MultipleCamera_v1");
+        text -l ""; 
+        text -l ""; 
+        text -l ""; 
+        text -l ""; 
+        text -l ""; 
+        text -l ""; 
+        text -l ""; 
+        }
+    }
+// show the main window
+showWindow PScamera_gui;
+window -e -width 500 -height 200 PScamera_gui;
+}
+
+// procedure to create a render layer and attributes for existing cameras
+global proc PS_MultipleCamera(){
+string $cams[] = `ls -cameras`; 
+    for($each in $cams){
+        string $cam[] = `listRelatives -p -type "transform" $each`;
+        if($cam[0] == "persp" || $cam[0] == "top" || $cam[0] == "front" || $cam[0] == "side"){
+        }
+        else{
+        if(`attributeExists "Start" $cam[0]` || `attributeExists "End" $cam[0]`){
+                }else{
+                    addAttr -ln "Start" -at long -dv 1 $cam[0];
+                    addAttr -ln "End" -at long -dv 24 $cam[0];
+                    createRenderLayer -name ($cam[0]+"Layer") -global; 
+                } 
+        }
+    }
+PS_MultipleCamera_gui;
+}
