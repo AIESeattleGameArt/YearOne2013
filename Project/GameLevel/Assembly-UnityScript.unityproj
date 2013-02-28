@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{F055254A-DC9D-12AE-6E1D-A73935951909}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_1;UNITY_4_0;UNITY_STANDALONE_OSX;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\CharacterControls-(No Networking code)\SpringFollowCamera.js" />
+     <Compile Include="Assets\CharacterControls-(No Networking code)\ThirdPersonController.js" />
+     <Compile Include="Assets\CharacterControls-(No Networking code)\ThirdPersonPushBodies.js" />
+     <Compile Include="Assets\CharacterControls-(No Networking code)\ThirdPersonSimpleAnimation.js" />
+     <Compile Include="Assets\Scripts\Camera\Camera_Follow.js" />
+     <Compile Include="Assets\Scripts\Camera\SpringFollowCameraGeneric.js" />
+     <Compile Include="Assets\Scripts\DemoScripts\Create.js" />
+     <Compile Include="Assets\Scripts\DemoScripts\Follow.js" />
+     <Compile Include="Assets\Scripts\DemoScripts\Move.js" />
+     <Compile Include="Assets\Scripts\DemoScripts\Switch.js" />
+     <Compile Include="Assets\Scripts\Effects\CollisionParticleEffect.js" />
+     <Compile Include="Assets\Scripts\Effects\CollisionSoundEffect.js" />
+     <Compile Include="Assets\Scripts\Effects\Foot.js" />
+     <Compile Include="Assets\Scripts\Effects\SpecialEffectHandler.js" />
+     <Compile Include="Assets\Scripts\Effects\StopEmittingAfterDelay.js" />
+     <Compile Include="Assets\Scripts\OnTarget.js" />
+     <Compile Include="Assets\Scripts\Unit.js" />
+     <Compile Include="Assets\Scripts\UnitPlayer.js" />
+     <Compile Include="Assets\Scripts\Vehicles\Bullet.js" />
+     <Compile Include="Assets\Scripts\Vehicles\Car.js" />
+     <Compile Include="Assets\Scripts\Vehicles\Car_Tank.js" />
+     <Compile Include="Assets\Scripts\Vehicles\Car_Tank_UI.js" />
+     <Compile Include="Assets\Scripts\Vehicles\FloatableWater.js" />
+     <Compile Include="Assets\Scripts\Vehicles\Skidmarks.js" />
+     <Compile Include="Assets\Scripts\Vehicles\WaterSpume.js" />
+     <Compile Include="Assets\Scripts\WIP\Bullet_Impact_WIP.js" />
+     <Compile Include="Assets\Scripts\WIP\Bullet_WIP.js" />
+     <Compile Include="Assets\Scripts\WIP\Camera_Follow_WIP.js" />
+     <Compile Include="Assets\Scripts\WIP\UnitPlayer_WIP.js" />
+     <Compile Include="Assets\Scripts\WIP\Unit_WIP.js" />
+     <Compile Include="Assets\Scripts\WIP\WIP_Bullet.js" />
+     <Compile Include="Assets\Scripts\WIP\WIP_Bullet_Impact.js" />
+     <Compile Include="Assets\Scripts\WIP\WIP_Camera_Follow.js" />
+     <Compile Include="Assets\Scripts\WIP\WIP_Unit.js" />
+     <Compile Include="Assets\Scripts\WIP\WIP_UnitPlayer.js" />
+     <Compile Include="Assets\Scripts\mtonScripts\mton_DeltaTimeStopper.js" />
+     <Compile Include="Assets\Scripts\mtonScripts\mton_GLOBAL.js" />
+     <Compile Include="Assets\Scripts\mtonScripts\mton_Icon.js" />
+     <None Include="Assets\Shaders\mton\mton_vertex_BRDF.shader" />
+     <None Include="Assets\Shaders\mton\mton_vertex_BRDF_DEMO.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{FB226ED7-302B-B2A1-4DBB-E7E1ADC594CC}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{00EAD22C-1B79-B160-9511-1FE6510429CD}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
