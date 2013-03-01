@@ -25,10 +25,10 @@ Shader "MTON/vertex_BRDF" {
       void vert (inout appdata_full v, out Input o) {
       	  UNITY_INITIALIZE_OUTPUT(Input,o);
       	  //float2 matcapUV = normalize(mul(UNITY_MATRIX_MV, float4(v.normal,0.0))).xy *0.5 + 0.5;
-          float3 viewDir = normalize(ObjSpaceViewDir(v.vertex)); //WorldSpaceViewDir(v.vertex) doesn't handle object rotation
-          float3 vNormal = normalize(v.normal);
-          float  NdotE   = saturate(dot(vNormal, viewDir)); //fall off/rim shader       
-          float  NdotL   = dot(vNormal, _WorldSpaceLightPos0.yzx); //what the heck yzx instead of xyz; also don't clamp
+          float3 viewDir = normalize(ObjSpaceViewDir(v.vertex)); //WorldSpaceViewDir(v.vertex) doesn't handle object rotation ObjSpaceViewDir
+          float3 vNormal = normalize(mul( _Object2World, float4(v.normal, 0.0) )); // normal in world space
+          float  NdotE   = saturate(dot(v.normal, viewDir));       //fall off/rim shader NOTE: normal in object space, not world       
+          float  NdotL   = dot(vNormal, _WorldSpaceLightPos0.xyz); //don't clamp
           
           //do diffuse wrap
 		  float  diff   = ((NdotL)) * 0.5 + 0.5;
