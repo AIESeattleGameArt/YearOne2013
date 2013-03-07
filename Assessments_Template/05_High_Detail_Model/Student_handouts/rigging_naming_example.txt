@@ -1,0 +1,33 @@
+arms
+
+jnt_shoulder_l
+jnt_elbow_l
+jnt_wrist_l
+jnt_index1_l
+jnt_index2_l etc
+jnt_middle_l
+jnt_ring_l
+jnt_pinky_l
+
+
+
+up from the pelvis
+
+jnt_pelvis
+jnt_spine1
+jnt_spine2 etc
+jnt_neck
+jnt_crown
+jnt_jaw
+jnt_jawEnd
+
+
+
+legs
+
+jnt_pelvis
+jnt_leg_l
+jnt_knee_l
+jnt_ankle_l
+jnt_ball_l
+jnt_toe_l

@@ -1,0 +1,9 @@
+set type to quads,
+tesselation to general,
+
+
+utype    per span # of isoparams
+number U - custom for subdivisions
+
+vtype	per span # of isoparams
+number V - custom for subdivisions

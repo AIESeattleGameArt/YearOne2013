@@ -1,0 +1,11 @@
+to fix local rotation axis on controllers:
+
+1. Create Null Group by clicking in viewport and hitting Ctrl + G
+
+2. Snap pivot point of null group to joint, Freeze Transforms
+
+3. Shift select joint, then null group and run orient constraint without offset on all axis. 
+
+4. delete constraint from null group, parent controller under null group. 
+
+5. Freeze transforms on controller. DING!
