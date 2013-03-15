@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: VM_Rollerblade.ma
-//Last modified: Fri, Mar 15, 2013 11:36:57 AM
+//Last modified: Fri, Mar 15, 2013 11:39:09 AM
 //Codeset: 1252
 file -rdi 1 -ns "ReferenceHero" -rfn "ReferenceHeroRN" "C:/Users/student/Documents/GitHub/YearOne2013/ReferenceHero/ReferenceHero.ma";
 file -r -ns "ReferenceHero" -dr 1 -rfn "ReferenceHeroRN" "C:/Users/student/Documents/GitHub/YearOne2013/ReferenceHero/ReferenceHero.ma";
@@ -14,8 +14,8 @@ fileInfo "osv" "Microsoft Windows 7 Business Edition, 64-bit Windows 7 Service P
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.5589377802206048 4.9712149894185602 14.398429442852324 ;
-	setAttr ".r" -type "double3" -10.538352729665995 1110.2000000000403 0 ;
+	setAttr ".t" -type "double3" 17.646981229728155 -0.038598862551481705 2.666299675125563 ;
+	setAttr ".r" -type "double3" 6.8616472703342817 1161.7999999998774 -2.7874381785529259e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
@@ -1811,8 +1811,9 @@ createNode mesh -n "polySurfaceShape5" -p "polySurface5";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 6 ".pt[630:635]" -type "float3"  0 0 -0.25660062 0 0 -0.2895717 
-		0 0 -0.11264727 -0.01105663 0 -0.25406289 0 0 -0.080217399 0.074436158 0 0;
+	setAttr -s 6 ".pt[630:635]" -type "float3"  0.028110856 -0.03629062 -0.13639392 
+		0 0 -0.2895717 0 0 -0.11264727 -0.01105663 0 -0.25406289 0 0 -0.080217399 0.074436158 
+		0 0;
 createNode lightLinker -s -n "lightLinker1";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
