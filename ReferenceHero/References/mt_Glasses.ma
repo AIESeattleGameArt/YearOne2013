@@ -1,33 +1,7 @@
 //Maya ASCII 2013 scene
-//Name: ReferenceHero.ma
-//Last modified: Sat, Mar 16, 2013 04:21:43 PM
+//Name: mt_Glasses.ma
+//Last modified: Sat, Mar 16, 2013 04:16:51 PM
 //Codeset: UTF-8
-file -rdi 1 -ns "bc_leftwing" -rfn "bc_leftwingRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/bc_leftwing.ma";
-file -rdi 2 -ns "Hero_Body" -rfn "bc_leftwing:Hero_BodyRN" "C:/Users/student/Documents/GitHub/YearOne2013/ReferenceHero/Hero_Body.ma";
-file -rdi 1 -ns "BN_Tie" -rfn "BN_TieRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/BN_Tie.ma";
-file -rdi 1 -ns "DN_Right_Wing" -rfn "DN_Right_WingRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/DN_Right_Wing.ma";
-file -rdi 2 -ns "Hero_Body" -rfn "DN_Right_Wing:Hero_BodyRN" "C:/Users/student/Documents/GitHub/YearOne2013/ReferenceHero/Hero_Body.ma";
-file -rdi 1 -ns "Hero_Body" -rfn "Hero_BodyRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/Hero_Body.ma";
-file -rdi 1 -ns "MM_Arm" -rfn "MM_ArmRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/MM_Arm.ma";
-file -rdi 2 -ns "Hero_Body" -rfn "MM_Arm:Hero_BodyRN" "C:/Users/student/Documents/GitHub/YearOne2013/ReferenceHero/Hero_Body.ma";
-file -rdi 1 -ns "mt_Glasses" -rfn "mt_GlassesRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/mt_Glasses.ma";
-file -rdi 1 -ns "NC_Hat" -rfn "NC_HatRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/NC_Hat.ma";
-file -rdi 2 -ns "Hero_Body" -rfn "NC_Hat:Hero_BodyRN" "C:/Users/student/Documents/GitHub/YearOne2013/ReferenceHero/Hero_Body.ma";
-file -rdi 1 -ns "TN_Lance" -rfn "TN_LanceRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/TN Lance.ma";
-file -rdi 2 -ns "Hero_Body" -rfn "TN_Lance:Hero_BodyRN" "C:/Users/student/Documents/GitHub/YearOne2013/ReferenceHero/Hero_Body.ma";
-file -rdi 1 -ns "TT_mitten" -rfn "TT_mittenRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/TT_mitten.ma";
-file -rdi 2 -ns "Hero_Body" -rfn "TT_mitten:Hero_BodyRN" "C:/Users/student/Desktop/Tina/YearOne2013/ReferenceHero/Hero_Body.ma";
-file -rdi 1 -ns "VM_Rollerblade" -rfn "VM_RollerbladeRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/VM_Rollerblade.ma";
-file -r -ns "bc_leftwing" -dr 1 -rfn "bc_leftwingRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/bc_leftwing.ma";
-file -r -ns "BN_Tie" -dr 1 -rfn "BN_TieRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/BN_Tie.ma";
-file -r -ns "DN_Right_Wing" -dr 1 -rfn "DN_Right_WingRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/DN_Right_Wing.ma";
-file -r -ns "Hero_Body" -dr 1 -rfn "Hero_BodyRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/Hero_Body.ma";
-file -r -ns "MM_Arm" -dr 1 -rfn "MM_ArmRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/MM_Arm.ma";
-file -r -ns "mt_Glasses" -dr 1 -rfn "mt_GlassesRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/mt_Glasses.ma";
-file -r -ns "NC_Hat" -dr 1 -rfn "NC_HatRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/NC_Hat.ma";
-file -r -ns "TN_Lance" -dr 1 -rfn "TN_LanceRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/TN Lance.ma";
-file -r -ns "TT_mitten" -dr 1 -rfn "TT_mittenRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/TT_mitten.ma";
-file -r -ns "VM_Rollerblade" -dr 1 -rfn "VM_RollerbladeRN1" "/Users/mton/Google Drive/AIE/StudentData/YearOne2013/ReferenceHero//References/VM_Rollerblade.ma";
 requires maya "2013";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
@@ -39,12 +13,12 @@ fileInfo "osv" "Mac OS X 10.8.3";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -24.1420260014763 31.740710408757565 32.750387366012099 ;
-	setAttr ".r" -type "double3" -29.738352729602425 -37 0 ;
+	setAttr ".t" -type "double3" -3.977977108452563 11.496932392329088 27.016406138208851 ;
+	setAttr ".r" -type "double3" -5.7383527295989643 -8.5999999999822183 2.0104514256683227e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 46.20005447434032;
+	setAttr ".coi" 26.736768367788191;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -66,12 +40,12 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".o" yes;
 createNode transform -s -n "front";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 0 100.1 ;
+	setAttr ".t" -type "double3" 0 16.776631664188855 100.49346698171952 ;
 createNode camera -s -n "frontShape" -p "front";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 57.223340203459649;
+	setAttr ".ow" 2.724727028764546;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -79,33 +53,170 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".o" yes;
 createNode transform -s -n "side";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 100.1 0 0 ;
+	setAttr ".t" -type "double3" 101.52836999035355 16.883449769696416 1.6013345728049702 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 6.4526315789473667;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
+createNode transform -n "glasses";
+createNode transform -n "pCube1" -p "glasses";
+	setAttr ".t" -type "double3" 0 16.776631664188855 1.4550051599587193 ;
+	setAttr ".s" -type "double3" 1.1914809476874757 1 0.51068303582579788 ;
+createNode mesh -n "pCubeShape1" -p "pCube1";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".db" yes;
+createNode mesh -n "polySurfaceShape1" -p "pCube1";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 39 ".uvst[0].uvsp[0:38]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.48409757 0 0.48409757 1 0.48409757 0.25 0.48409757
+		 0.5 0.48409757 0.75 0.51422852 0 0.51422852 1 0.51422852 0.25 0.51422852 0.5 0.51422852
+		 0.75 0.49581519 0 0.49581519 1 0.49581519 0.25 0.49581519 0.5 0.49581519 0.75 0.38868281
+		 0 0.38868281 1 0.38868281 0.25 0.38868281 0.5 0.38868281 0.74999994 0.60964328 0
+		 0.60964328 1 0.60964328 0.25 0.60964328 0.5 0.60964328 0.75;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 4 ".pt[16:19]" -type "float3"  0.016773896 0.16361558 0 
+		0.016773896 0.16361558 0 0.016773896 -0.0037294268 0 0.016773896 -0.0037294268 0;
+	setAttr -s 28 ".vt[0:27]"  -0.62227339 -0.14765739 -0.10546923 0.62227339 -0.14765739 -0.10546923
+		 -0.62227339 -0.14765739 0.10547113 0.62227339 -0.14765739 0.10547113 -0.62227339 0.14765739 0.10547113
+		 0.62227339 0.14765739 0.10547113 -0.62227339 0.14765739 -0.10546923 0.62227339 0.14765739 -0.10546923
+		 -0.079165429 -0.14765739 -0.10546923 -0.079165429 -0.14765739 0.10547137 -0.079165429 0.14765739 0.10547137
+		 -0.079165429 0.14765739 -0.10546923 0.070832178 -0.14765739 -0.10546923 0.070832178 -0.14765739 0.10547113
+		 0.070832178 0.14765739 0.10547113 0.070832178 0.14765739 -0.10546923 -0.020832995 -0.14765739 -0.10546923
+		 -0.020832995 -0.14765739 0.10547137 -0.020832995 0.14765739 0.10547137 -0.020832995 0.14765739 -0.10546923
+		 -0.55415779 -0.14765739 -0.10546923 -0.55415779 -0.14765739 0.10547113 -0.55415779 0.14765739 0.10547113
+		 -0.55415779 0.14765739 -0.10546923 0.54582453 -0.14765739 -0.10546923 0.54582453 -0.14765739 0.10547113
+		 0.54582453 0.14765739 0.10547113 0.54582453 0.14765739 -0.10546923;
+	setAttr -s 52 ".ed[0:51]"  0 20 0 2 21 0 4 22 0 6 23 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0 8 16 0 9 17 0 10 18 0 11 19 0 8 9 1 9 10 1 10 11 1
+		 11 8 1 12 24 0 13 25 0 14 26 0 15 27 0 12 13 1 13 14 1 14 15 1 15 12 1 16 12 0 17 13 0
+		 18 14 0 19 15 0 16 17 1 17 18 1 18 19 1 19 16 1 20 8 0 21 9 0 22 10 0 23 11 0 20 21 1
+		 21 22 1 22 23 1 23 20 1 24 1 0 25 3 0 26 5 0 27 7 0 24 25 1 25 26 1 26 27 1 27 24 1;
+	setAttr -s 26 -ch 104 ".fc[0:25]" -type "polyFaces" 
+		f 4 0 40 -2 -5
+		mu 0 4 0 29 31 2
+		f 4 1 41 -3 -7
+		mu 0 4 2 31 32 4
+		f 4 2 42 -4 -9
+		mu 0 4 4 32 33 6
+		f 4 3 43 -1 -11
+		mu 0 4 6 33 30 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13
+		f 4 -17 12 32 -14
+		mu 0 4 16 14 24 26
+		f 4 -18 13 33 -15
+		mu 0 4 17 16 26 27
+		f 4 -19 14 34 -16
+		mu 0 4 18 17 27 28
+		f 4 -20 15 35 -13
+		mu 0 4 15 18 28 25
+		f 4 -25 20 48 -22
+		mu 0 4 21 19 34 36
+		f 4 -26 21 49 -23
+		mu 0 4 22 21 36 37
+		f 4 -27 22 50 -24
+		mu 0 4 23 22 37 38
+		f 4 -28 23 51 -21
+		mu 0 4 20 23 38 35
+		f 4 -33 28 24 -30
+		mu 0 4 26 24 19 21
+		f 4 -34 29 25 -31
+		mu 0 4 27 26 21 22
+		f 4 -35 30 26 -32
+		mu 0 4 28 27 22 23
+		f 4 -36 31 27 -29
+		mu 0 4 25 28 23 20
+		f 4 -41 36 16 -38
+		mu 0 4 31 29 14 16
+		f 4 -42 37 17 -39
+		mu 0 4 32 31 16 17
+		f 4 -43 38 18 -40
+		mu 0 4 33 32 17 18
+		f 4 -44 39 19 -37
+		mu 0 4 30 33 18 15
+		f 4 -49 44 5 -46
+		mu 0 4 36 34 1 3
+		f 4 -50 45 7 -47
+		mu 0 4 37 36 3 5
+		f 4 -51 46 9 -48
+		mu 0 4 38 37 5 7
+		f 4 -52 47 11 -45
+		mu 0 4 35 38 7 9;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".db" yes;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 11 ".lnk";
-	setAttr -s 11 ".slnk";
+	setAttr -s 12 ".lnk";
+	setAttr -s 12 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
-createNode shadingEngine -n "stickFigure_Hero:defaultMat";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode materialInfo -n "stickFigure_Hero:materialInfo1";
-createNode lambert -n "stickFigure_Hero:defaultMat1";
-	setAttr ".c" -type "float3" 0.80000001 0.80000001 0.80000001 ;
-	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode polyExtrudeFace -n "polyExtrudeFace1";
+	setAttr ".ics" -type "componentList" 2 "f[3]" "f[25]";
+	setAttr ".ix" -type "matrix" 1.1914809476874757 0 0 0 0 1 0 0 0 0 0.51068303582579788 0
+		 0 16.776631664188855 1.4550051599587193 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0 16.776632 1.4011438 ;
+	setAttr ".rs" 619335436;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -0.74142688310572258 16.628974269779675 1.4011438150113196 ;
+	setAttr ".cbx" -type "double3" 0.74142688310572258 16.924289058598035 1.4011438150113196 ;
+createNode polySoftEdge -n "polySoftEdge1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 3 "e[0:39]" "e[41]" "e[43:67]";
+	setAttr ".ix" -type "matrix" 1.1914809476874757 0 0 0 0 1 0 0 0 0 0.51068303582579788 0
+		 0 16.776631664188855 1.4550051599587193 1;
+	setAttr ".a" 0;
+createNode polyTweak -n "polyTweak1";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".tk";
+	setAttr ".tk[8]" -type "float3" 0 0 0.32701147 ;
+	setAttr ".tk[9]" -type "float3" 0 0 0.32701147 ;
+	setAttr ".tk[10]" -type "float3" 0 0 0.32701147 ;
+	setAttr ".tk[11]" -type "float3" 0 0 0.32701147 ;
+	setAttr ".tk[12]" -type "float3" 0 0 0.32701147 ;
+	setAttr ".tk[13]" -type "float3" 0 0 0.32701147 ;
+	setAttr ".tk[14]" -type "float3" 0 0 0.32701147 ;
+	setAttr ".tk[15]" -type "float3" 0 0 0.32701147 ;
+	setAttr ".tk[16]" -type "float3" 0 0 0.32701147 ;
+	setAttr ".tk[17]" -type "float3" 0 0 0.32701147 ;
+	setAttr ".tk[18]" -type "float3" 0 0 0.32701147 ;
+	setAttr ".tk[19]" -type "float3" 0 0 0.32701147 ;
+	setAttr ".tk[28]" -type "float3" 0 -0.012157038 -1.8688236 ;
+	setAttr ".tk[29]" -type "float3" 0 -0.012157038 -1.8688236 ;
+	setAttr ".tk[30]" -type "float3" 0 0.18909594 -1.8688236 ;
+	setAttr ".tk[31]" -type "float3" 0 0.18909594 -1.8688236 ;
+	setAttr ".tk[32]" -type "float3" 0 -0.012157038 -1.8688236 ;
+	setAttr ".tk[33]" -type "float3" 0 0.18909594 -1.8688236 ;
+	setAttr ".tk[34]" -type "float3" 0 -0.012157038 -1.8688236 ;
+	setAttr ".tk[35]" -type "float3" 0 0.18909594 -1.8688236 ;
 createNode script -n "uiConfigurationScriptNode";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"top\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n"
@@ -166,7 +277,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                $editorName;\nstereoCameraView -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n"
 		+ "                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n"
 		+ "                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n"
-		+ "                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                $editorName;\nstereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 25 100 -ps 2 75 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Outliner\")) \n\t\t\t\t\t\"outlinerPanel\"\n"
+		+ "                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                $editorName;\nstereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 38 100 -ps 2 62 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Outliner\")) \n\t\t\t\t\t\"outlinerPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"outlinerPanel -edit -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
@@ -177,155 +288,20 @@ createNode script -n "uiConfigurationScriptNode";
 createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 24 -ast 1 -aet 48 ";
 	setAttr ".st" 6;
-createNode reference -n "bc_leftwingRN";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"bc_leftwingRN"
-		"bc_leftwingRN" 0
-		"bc_leftwing:Hero_BodyRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "BN_TieRN";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"BN_TieRN"
-		"BN_TieRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "DN_Right_WingRN";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"DN_Right_WingRN"
-		"DN_Right_Wing:Hero_BodyRN" 0
-		"DN_Right_WingRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "Hero_BodyRN";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"Hero_BodyRN"
-		"Hero_BodyRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "MM_ArmRN";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"MM_ArmRN"
-		"MM_ArmRN" 0
-		"MM_Arm:Hero_BodyRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "mt_GlassesRN";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"mt_GlassesRN"
-		"mt_GlassesRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "NC_HatRN";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"NC_HatRN"
-		"NC_Hat:Hero_BodyRN" 0
-		"NC_HatRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "TN_LanceRN";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"TN_LanceRN"
-		"TN_LanceRN" 0
-		"TN_Lance:Hero_BodyRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "TT_mittenRN";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"TT_mittenRN"
-		"TT_mittenRN" 0
-		"TT_mitten:Hero_BodyRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "VM_RollerbladeRN";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"VM_RollerbladeRN"
-		"VM_RollerbladeRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "bc_leftwingRN1";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"bc_leftwingRN1"
-		"bc_leftwingRN1" 0
-		"bc_leftwing:Hero_BodyRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "BN_TieRN1";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"BN_TieRN1"
-		"BN_TieRN1" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "DN_Right_WingRN1";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"DN_Right_WingRN1"
-		"DN_Right_Wing:Hero_BodyRN" 0
-		"DN_Right_WingRN1" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "Hero_BodyRN1";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"Hero_BodyRN1"
-		"Hero_BodyRN1" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "MM_ArmRN1";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"MM_ArmRN1"
-		"MM_ArmRN1" 0
-		"MM_Arm:Hero_BodyRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "mt_GlassesRN1";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"mt_GlassesRN1"
-		"mt_GlassesRN1" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "NC_HatRN1";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"NC_HatRN1"
-		"NC_HatRN1" 0
-		"NC_Hat:Hero_BodyRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "TN_LanceRN1";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"TN_LanceRN1"
-		"TN_LanceRN1" 0
-		"TN_Lance:Hero_BodyRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "TT_mittenRN1";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"TT_mittenRN1"
-		"TT_mittenRN1" 0
-		"TT_mitten:Hero_BodyRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "VM_RollerbladeRN1";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"VM_RollerbladeRN1"
-		"VM_RollerbladeRN1" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
 select -ne :renderPartition;
-	setAttr -s 10 ".st";
+	setAttr -s 2 ".st";
 select -ne :initialShadingGroup;
-	setAttr -s 27 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 21 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultShaderList1;
-	setAttr -s 10 ".s";
+	setAttr -s 2 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
-	setAttr -s 17 ".r";
 select -ne :renderGlobalsList1;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
@@ -333,20 +309,18 @@ select -ne :hardwareRenderGlobals;
 select -ne :defaultHardwareRenderGlobals;
 	setAttr ".fn" -type "string" "im";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
+connectAttr "polySoftEdge1.out" "pCubeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "stickFigure_Hero:defaultMat.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "stickFigure_Hero:defaultMat.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "stickFigure_Hero:defaultMat1.oc" "stickFigure_Hero:defaultMat.ss";
-connectAttr "stickFigure_Hero:defaultMat.msg" "stickFigure_Hero:materialInfo1.sg"
-		;
-connectAttr "stickFigure_Hero:defaultMat1.msg" "stickFigure_Hero:materialInfo1.m"
-		;
-connectAttr "stickFigure_Hero:defaultMat.pa" ":renderPartition.st" -na;
-connectAttr "stickFigure_Hero:defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "polySurfaceShape1.o" "polyExtrudeFace1.ip";
+connectAttr "pCubeShape1.wm" "polyExtrudeFace1.mp";
+connectAttr "polyTweak1.out" "polySoftEdge1.ip";
+connectAttr "pCubeShape1.wm" "polySoftEdge1.mp";
+connectAttr "polyExtrudeFace1.out" "polyTweak1.ip";
+connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of ReferenceHero.ma
+// End of mt_Glasses.ma
