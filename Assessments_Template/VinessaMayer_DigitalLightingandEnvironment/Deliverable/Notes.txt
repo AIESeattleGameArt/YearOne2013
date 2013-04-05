@@ -1,5 +1,0 @@
-What I learned: I learned quite a bit about how lighting effects materials and how the shadows, Mental Ray, lens shaders and the physical sun and Sky work. I also learned about many of the settings contained within them.
-
-Predictions on how to improve:
-
-Practice and learn more about precise controland the lighting physics, for example more effective Glow control. It relies on an outside light source yet it seems to generate a very large amount of light on it's own. Glow effects also seem to feed on the ambient light of other glow sources as well as the source light, and from very far away. Muliple objects with glow specialFocus on creating what I want instead of just finding something that looks good on accident.
