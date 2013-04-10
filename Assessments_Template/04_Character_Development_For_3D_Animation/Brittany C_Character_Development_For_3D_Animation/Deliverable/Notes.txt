@@ -1,0 +1,11 @@
+What I learned:
+
+I learned about character design, sillhouette, eyeflow, anatomy, and line flow in a character model.  I learned to build my own model through Maya and Z-Brush, including sculpting, basic painting, and basic texturing.
+
+Predictions on how to improve:
+
+I think I was able to come up with a pretty solid, believable concept.
+
+I'd like to get even better at sculpting and building the model.  Since this model is a creature, I didn't really have to extrude any clothing or armor pieces, so I'd like to get some more actual practice with that in the future.  I'd also like to do a better job with the painting/texturing and I need to work on actually defining the topology, since it's a super high poly count right now.
+
+I just need to get better and more familiar with the programs and such.  I'm looking forward to learning more and being able to apply that knowledge to future character projects.
