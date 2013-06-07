@@ -1,0 +1,3 @@
+What I learned: I have learned how to retopologize,create texture ane normal maps, rigging, and weight painting.
+
+Predictions on how to improve: I feel like need to improve on making better topology around jointed areas, and doing weight painting
