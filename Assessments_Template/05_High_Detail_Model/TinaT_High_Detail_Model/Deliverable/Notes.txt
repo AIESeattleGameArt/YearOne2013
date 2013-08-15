@@ -1,0 +1,14 @@
+What I learned: 
+-The importance of good topology
+-rigging and skinning a character and the challenges of a compact character with short limbs
+-clothing is challenging
+-normal maps are pretty interesting
+-working back and forth with zBrush, Maya and Unity
+
+
+
+
+Predictions on how to improve: 
+-Think about how the character and clothing will behave during the skinning process and address those challenges early on. 
+-Learn to use shaders
+-Figure out how to add softness
